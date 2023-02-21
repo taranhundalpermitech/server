@@ -1,0 +1,8 @@
+Flask
+celery[mongodb]
+boto3
+pymongo
+flask_socketio
+eventlet==0.30.2
+gunicorn
+flask-cors
