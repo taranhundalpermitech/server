@@ -48,7 +48,8 @@ def confirmation_message():
 
 @socketio.on('pong')
 def handle_data(data):
-    print('Received data from client: ' + data)
+    print('Received data from client: ')
+    print(data)
 
 
 
