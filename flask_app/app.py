@@ -46,7 +46,9 @@ def confirmation_message():
 # event handler for name submission by the client 
 
 
-
+@socketio.on('pong')
+def handle_data(data):
+    print('Received data from client: ' + data)
 
 
 
@@ -86,7 +88,7 @@ def getPPEDetections():
     return(result)
 if __name__ == "__main__":
 #    socketio.run(app,debug=True,port=5000)
-    socketio.run(app, host="0.0.0.0", port="5000", debug=True, ssl_context=('cert.pem', 'key.pem'))
+    socketio.run(app, host="0.0.0.0", port="5000", ssl_context=('cert.pem', 'key.pem'))
 
 
 # cd flask_app
